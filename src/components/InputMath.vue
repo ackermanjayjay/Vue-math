@@ -1,18 +1,19 @@
 <script setup>
 import { ref } from "vue";
+import { addition, subtrack, divide } from "../../modules/services/BasicMath";
 
 const x1 = ref(0);
 const x2 = ref(0);
 const result = ref(0);
 
-const addition = () => {
-  result.value = +x1.value + +x2.value;
+const add = () => {
+  result.value = addition(x1.value, x2.value);
 };
-const subtrack = () => {
-  result.value = +x1.value - +x2.value;
+const minus = () => {
+  result.value = subtrack(x1.value, x2.value);
 };
-const divide = () => {
-  result.value = +x1.value / +x2.value;
+const divid = () => {
+  result.value = divide(x1.value, x2.value);
 };
 </script>
 
@@ -28,13 +29,13 @@ const divide = () => {
     v-model="x2"
   />
   <div class="join gap-5">
-    <button class="btn btn-accent" @click="addition" :disabled="!x1 || !x2">
+    <button class="btn btn-accent" @click="add" :disabled="!x1 || !x2">
       Tambah
     </button>
-    <button class="btn btn-error" @click="subtrack" :disabled="!x1 || !x2">
+    <button class="btn btn-error" @click="minus" :disabled="!x1 || !x2">
       Kurang
     </button>
-    <button class="btn btn-error" @click="divide" :disabled="!x1 || !x2">
+    <button class="btn btn-error" @click="divid" :disabled="!x1 || !x2">
       Bagi
     </button>
   </div>

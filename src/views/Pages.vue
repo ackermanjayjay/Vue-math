@@ -1,13 +1,11 @@
 <script setup>
-import BasicMath from './features/BasicMath.vue';
-
+import BasicMath from "./features/BasicMath.vue";
+import Metrics from "./features/Metrics.vue";
 // Props message to parent app.vue
-defineProps({
-  msg: String,
-});
 
 </script>
 
 <template>
-    <BasicMath msg="Basic Math"></BasicMath>
+  <BasicMath></BasicMath>
+  <Metrics></Metrics>
 </template>

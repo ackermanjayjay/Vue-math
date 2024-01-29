@@ -5,7 +5,7 @@ import Pages from './views/Pages.vue';
 
 <template>
   <Navigation></Navigation>
-    <Pages msg="Basic Aritmath" />
+    <Pages/>
 </template>
 
 
